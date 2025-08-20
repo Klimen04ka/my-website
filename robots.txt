@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Specific directives for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Block access to certain file types
+Disallow: *.css$
+Disallow: *.js$
+Disallow: /api/
+Disallow: /admin/
+Disallow: /tmp/
+
+# Allow CSS and JS for rendering
+User-agent: Googlebot
+Allow: *.css
+Allow: *.js
+
+User-agent: Bingbot
+Allow: *.css
+Allow: *.js
+
+# Sitemap location
+Sitemap: https://klymenko-brows.com/sitemap.xml
+
+# Host preference
+Host: klymenko-brows.com

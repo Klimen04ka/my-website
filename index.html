@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кристина Клименко - Мастер бровист в Таллинне и Тарту | klymenko-brows.com</title>
+    <meta property="og:url" content="https://klymenko-brows.com">
+    <link rel="canonical" href="https://klymenko-brows.com">
+
+        <!-- Favicon и иконки -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #D4A574;
+            --accent-gold: #B8956A;
+            --dark-brown: #4A3C2A;
+            --light-cream: #FFF8F3;
+            --soft-beige: #F5F0EA;
+            --text-dark: #2C2C2C;
+            --text-light: #7A7A7A;
+            --gradient-primary: linear-gradient(135deg, #D4A574 0%, #B8956A 100%);
+            --gradient-light: linear-gradient(135deg, #FFF8F3 0%, #F5F0EA 100%);
+            --shadow-soft: 0 10px 40px rgba(212, 165, 116, 0.15);
+            --shadow-medium: 0 20px 60px rgba(212, 165, 116, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Навигация */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 248, 243, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 248, 243, 0.98);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 600;
+            color: var(--primary-gold);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-gold);
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 8px 15px;
+            border: 1px solid var(--primary-gold);
+            background: transparent;
+            color: var(--primary-gold);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-gold);
+            cursor: pointer;
+        }
+
+        /* Герой секция */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-light);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23D4A574" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23B8956A" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23D4A574" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 8vw, 72px);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 3vw, 20px);
+            color: var(--text-light);
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-gold);
+            padding: 15px 30px;
+            border: 2px solid var(--primary-gold);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-gold);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            animation: fadeInUp 0.8s ease 0.8s both;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 700;
+            color: var(--primary-gold);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 2;
+            animation: fadeInRight 1s ease 0.3s both;
+        }
+
+        .hero-photo {
+            width: 100%;
+            max-width: 450px;
+            height: 500px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            z-index: 1;
+        }
+
+        .floating-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 40px;
+            height: 40px;
+            margin-top: 80px;
+            margin-left: 100px;
+            animation-delay: -2s;
+        }
+
+        /* Секция услуг */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--soft-beige);
+            color: var(--primary-gold);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 6vw, 48px);
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: clamp(14px, 3vw, 18px);
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 165, 116, 0.1);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .service-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .service-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+
+        .duration {
+            font-size: 12px;
+            color: var(--text-light);
+            background: var(--soft-beige);
+            padding: 5px 12px;
+            border-radius: 15px;
+            white-space: nowrap;
+        }
+
+        /* Секция курсов */
+        .courses {
+            padding: 80px 0;
+            background: var(--gradient-light);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-gold);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .course-content {
+            padding: 30px 25px;
+        }
+
+        .course-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .course-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .course-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .course-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        .course-features li::before {
+            content: '✓';
+            color: var(--primary-gold);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--soft-beige);
+        }
+
+        .course-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-price .price {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+
+        .course-price .duration {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .course-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .course-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* Секция "О мне" */
+        .about {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .experience-badge {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+
+        .experience-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 700;
+            color: var(--primary-gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .experience-label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .about-text {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Портфолио */
+        .portfolio {
+            padding: 80px 0;
+            background: var(--gradient-light);
+        }
+
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--gradient-primary);
+            aspect-ratio: 4/5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .portfolio-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            background: var(--gradient-primary);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 25px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-category {
+            font-size: 12px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Контакты */
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: var(--soft-beige);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+            background: white;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        .instagram-highlight {
+            position: relative;
+            overflow: hidden;
+            background: white;
+        }
+
+        .instagram-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .booking-note {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .booking-note h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(18px, 4vw, 24px);
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        .booking-note p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .discount-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Футер */
+        .footer {
+            background: var(--dark-brown);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 165, 116, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .social-link:hover {
+            background: var(--primary-gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Анимации */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 248, 243, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 25px;
+                padding-top: 40px;
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .language-switcher {
+                gap: 8px;
+            }
+
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 80px 0 40px;
+                min-height: auto;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-photo {
+                height: 400px;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 12px 25px;
+                font-size: 13px;
+                min-width: 140px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 25px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-photo {
+                height: 350px;
+            }
+
+            .experience-badge {
+                position: static;
+                margin-top: 20px;
+                align-self: center;
+                width: fit-content;
+            }
+
+            .services {
+                padding: 60px 0;
+            }
+
+            .courses {
+                padding: 60px 0;
+            }
+
+            .about {
+                padding: 60px 0;
+            }
+
+            .portfolio {
+                padding: 60px 0;
+            }
+
+            .contact {
+                padding: 60px 0;
+            }
+
+            .services-grid,
+            .courses-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-card,
+            .course-card {
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .portfolio-filter {
+                gap: 10px;
+                padding: 0 10px;
+            }
+
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
+            .floating-elements {
+                display: none;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .contact-item {
+                padding: 18px;
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .contact-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-container {
+                padding: 0 15px;
+            }
+
+            .hero-photo {
+                height: 350px;
+                max-width: 280px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 200px;
+                justify-content: center;
+            }
+
+            .service-card,
+            .course-card,
+            .contact-item {
+                max-width: 100%;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .stat-item {
+                min-width: 70px;
+            }
+        }
+
+        /* Скролл индикатор */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(212, 165, 116, 0.2);
+            z-index: 9999;
+        }
+
+        .scroll-progress {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* Кнопка "Наверх" */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+    </style>
+</head>
+<body>
+    <!-- Индикатор прокрутки -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">KRISTINA</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-lang="nav_home">Главная</a></li>
+                <li><a href="#services" class="nav-link" data-lang="nav_services">Услуги</a></li>
+                <li><a href="#courses" class="nav-link" data-lang="nav_courses">Курсы</a></li>
+                <li><a href="#about" class="nav-link" data-lang="nav_about">О мне</a></li>
+                <li><a href="#portfolio" class="nav-link" data-lang="nav_portfolio">Портфолио</a></li>
+                <li><a href="#contact" class="nav-link" data-lang="nav_contact">Контакты</a></li>
+            </ul>
+
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="et">ET</button>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span data-lang="hero_badge">Сертифицированный мастер ELAN</span>
+                </span>
+                
+                <h1 class="hero-title">
+                    Кристина<br>
+                    <span style="color: var(--primary-gold);">Клименко</span>
+                </h1>
+                
+                <p class="hero-subtitle" data-lang="hero_subtitle">
+                    Создаю идеальные брови в Таллинне и Тарту
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">
+                        <i class="fab fa-instagram"></i>
+                        <span data-lang="hero_btn_book">Записаться в Instagram</span>
+                    </a>
+                    <a href="#portfolio" class="btn-secondary">
+                        <i class="fas fa-images"></i>
+                        <span data-lang="hero_btn_portfolio">Мои работы</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label" data-lang="stat_clients">Клиентов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label" data-lang="stat_experience">Лет опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label" data-lang="stat_cities">Города</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+            <img src="img/hero-photo.png" alt="Кристина Клименко - мастер бровист" class="hero-photo" />
+
+            </div>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-lang="services_badge">Мои услуги</span>
+                <h2 class="section-title" data-lang="services_title">Профессиональный уход за бровями</h2>
+                <p class="section-description" data-lang="services_description">
+                    Использую только премиальные материалы ELAN и современные техники
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service1_title">Архитектура + Хна</h3>
+                    <p class="service-description" data-lang="service1_desc">
+                        Создание формы бровей с окрашиванием натуральной хной. Эффект до 3 недель.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">25€</span>
+                        <span class="duration" data-lang="duration_1h">1 час</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service2_title">Архитектура + Краска</h3>
+                    <p class="service-description" data-lang="service2_desc">
+                        Коррекция формы с окрашиванием профессиональной краской. Эффект до 2 недель.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">20€</span>
+                        <span class="duration" data-lang="duration_45m">45 мин</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service3_title">Ламинирование</h3>
+                    <p class="service-description" data-lang="service3_desc">
+                        Полный комплекс: ламинирование + коррекция + окрашивание. Эффект до 6 недель.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">45€</span>
+                        <span class="duration" data-lang="duration_90m">1.5 часа</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service4_title">Консультация</h3>
+                    <p class="service-description" data-lang="service4_desc">
+                        Подбор формы и цвета бровей, рекомендации по уходу.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">10€</span>
+                        <span class="duration" data-lang="duration_20m">20 мин</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service5_title">Долговременная укладка</h3>
+                    <p class="service-description" data-lang="service5_desc">
+                        Укладка бровей с фиксацией. Идеальная форма каждый день.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">35€</span>
+                        <span class="duration" data-lang="duration_90m">1.5 часа</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service6_title">Перманентный макияж</h3>
+                    <p class="service-description" data-lang="service6_desc">
+                        Татуаж бровей с эффектом на 1-2 года. Натуральный результат.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">150€</span>
+                        <span class="duration" data-lang="duration_2h">2 часа</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service7_title">Коррекция перманента</h3>
+                    <p class="service-description" data-lang="service7_desc">
+                        Коррекция и освежение перманентного макияжа бровей.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">80€</span>
+                        <span class="duration" data-lang="duration_1h">1 час</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="service-title" data-lang="service8_title">Lami Lash</h3>
+                    <p class="service-description" data-lang="service8_desc">
+                        Ламинирование ресниц для выразительного взгляда.
+                    </p>
+                    <div class="service-price">
+                        <span class="price">45€</span>
+                        <span class="duration" data-lang="duration_90m">1.5 часа</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Курсы -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-lang="courses_badge">Обучение</span>
+                <h2 class="section-title" data-lang="courses_title">Авторские курсы</h2>
+                <p class="section-description" data-lang="courses_description">
+                    Передаю свой опыт и знания будущим мастерам красоты
+                </p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="course-badge" data-lang="course_popular">Популярный</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="course1_title">Базовый курс "Архитектура бровей"</h3>
+                        <p class="course-description" data-lang="course1_desc">
+                            Полный курс для начинающих мастеров. Изучите основы архитектуры, коррекции и окрашивания бровей.
+                        </p>
+                        <ul class="course-features">
+                            <li data-lang="course1_feature1">Теоретическая база</li>
+                            <li data-lang="course1_feature2">Практика на моделях</li>
+                            <li data-lang="course1_feature3">Сертификат</li>
+                            <li data-lang="course1_feature4">Поддержка после курса</li>
+                        </ul>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">350€</span>
+                                <span class="duration" data-lang="course_duration_3d">3 дня</span>
+                            </div>
+                            <a href="#contact" class="course-btn" data-lang="course_btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-star"></i>
+                        <div class="course-badge" data-lang="course_advanced">Продвинутый</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="course2_title">Ламинирование бровей</h3>
+                        <p class="course-description" data-lang="course2_desc">
+                            Изучите технику ламинирования и долговременной укладки бровей. Работа с современными составами.
+                        </p>
+                        <ul class="course-features">
+                            <li data-lang="course2_feature1">Техника ламинирования</li>
+                            <li data-lang="course2_feature2">Работа с составами</li>
+                            <li data-lang="course2_feature3">Практические навыки</li>
+                            <li data-lang="course2_feature4">Материалы включены</li>
+                        </ul>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">450€</span>
+                                <span class="duration" data-lang="course_duration_2d">2 дня</span>
+                            </div>
+                            <a href="#contact" class="course-btn" data-lang="course_btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-crown"></i>
+                        <div class="course-badge" data-lang="course_premium">Premium</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="course3_title">Перманентный макияж бровей</h3>
+                        <p class="course-description" data-lang="course3_desc">
+                            Профессиональный курс по перманентному макияжу. Изучите современные техники татуажа бровей.
+                        </p>
+                        <ul class="course-features">
+                            <li data-lang="course3_feature1">Теория пигментологии</li>
+                            <li data-lang="course3_feature2">Техники татуажа</li>
+                            <li data-lang="course3_feature3">Работа с оборудованием</li>
+                            <li data-lang="course3_feature4">Международный сертификат</li>
+                        </ul>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">850€</span>
+                                <span class="duration" data-lang="course_duration_5d">5 дней</span>
+                            </div>
+                            <a href="#contact" class="course-btn" data-lang="course_btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-eye"></i>
+                        <div class="course-badge" data-lang="course_new">Новинка</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="course4_title">Lami Lash - Ламинирование ресниц</h3>
+                        <p class="course-description" data-lang="course4_desc">
+                            Освойте популярную процедуру ламинирования ресниц. Создавайте выразительный взгляд без наращивания.
+                        </p>
+                        <ul class="course-features">
+                            <li data-lang="course4_feature1">Анатомия ресниц</li>
+                            <li data-lang="course4_feature2">Техника ламинирования</li>
+                            <li data-lang="course4_feature3">Подбор составов</li>
+                            <li data-lang="course4_feature4">Стартовый набор</li>
+                        </ul>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">280€</span>
+                                <span class="duration" data-lang="course_duration_1d">1 день</span>
+                            </div>
+                            <a href="#contact" class="course-btn" data-lang="course_btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-users"></i>
+                        <div class="course-badge" data-lang="course_group">Групповой</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="course5_title">Мастер-класс "Идеальные брови"</h3>
+                        <p class="course-description" data-lang="course5_desc">
+                            Интенсивный мастер-класс для практикующих мастеров. Секреты идеальной формы и симметрии.
+                        </p>
+                        <ul class="course-features">
+                            <li data-lang="course5_feature1">Авторские техники</li>
+                            <li data-lang="course5_feature2">Работа со сложными случаями</li>
+                            <li data-lang="course5_feature3">Q&A сессия</li>
+                            <li data-lang="course5_feature4">Networking</li>
+                        </ul>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">120€</span>
+                                <span class="duration" data-lang="course_duration_4h">4 часа</span>
+                            </div>
+                            <a href="#contact" class="course-btn" data-lang="course_btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <i class="fas fa-laptop"></i>
+                        <div class="course-badge" data-lang="course_online">Online</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="course6_title">Онлайн курс "Основы бровиста"</h3>
+                        <p class="course-description" data-lang="course6_desc">
+                            Теоретический курс для изучения основ профессии. Доступ к материалам на 6 месяцев.
+                        </p>
+                        <ul class="course-features">
+                            <li data-lang="course6_feature1">20+ видео уроков</li>
+                            <li data-lang="course6_feature2">Конспекты и схемы</li>
+                            <li data-lang="course6_feature3">Тесты и задания</li>
+                            <li data-lang="course6_feature4">Обратная связь</li>
+                        </ul>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">150€</span>
+                                <span class="duration" data-lang="course_duration_online">6 месяцев</span>
+                            </div>
+                            <a href="#contact" class="course-btn" data-lang="course_btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О мне -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                <img src="img/about-photo.png" alt="Кристина Клименко - мастер бровист" class="about-photo" />
+
+                    <div class="experience-badge">
+                        <span class="experience-number">3+</span>
+                        <span class="experience-label" data-lang="exp_years">года опыта</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-badge" data-lang="about_badge">О мастере</span>
+                    <h3 data-lang="about_title">Привет! Я Кристина — ваш мастер красоты</h3>
+                    
+                    <p class="about-text" data-lang="about_text">
+                        Более 5 лет помогаю женщинам обрести уверенность через красивые брови. 
+                        Сертифицированный технолог ELAN, использую только премиальные материалы.
+                    </p>
+                    
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span data-lang="feature1">Сертифицированный технолог ELAN</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span data-lang="feature2">Более 780 довольных клиентов</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span data-lang="feature3">Работаю в Таллинне и Тарту</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span data-lang="feature4">Персональный подход к каждому</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span data-lang="feature5">Только премиальные материалы</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn-primary">
+                        <i class="fab fa-instagram"></i>
+                        <span data-lang="about_btn">Связаться в Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Портфолио -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge" data-lang="portfolio_badge">Мои работы</span>
+            <h2 class="section-title" data-lang="portfolio_title">Портфолио</h2>
+            <p class="section-description" data-lang="portfolio_description">
+                Каждая работа — это индивидуальный подход и внимание к деталям
+            </p>
+        </div>
+
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all" data-lang="filter_all">Все работы</button>
+            <button class="filter-btn" data-filter="architecture" data-lang="filter_arch">Архитектура</button>
+            <button class="filter-btn" data-filter="lamination" data-lang="filter_lami">Ламинирование</button>
+            <button class="filter-btn" data-filter="permanent" data-lang="filter_perm">Перманент</button>
+            <button class="filter-btn" data-filter="lashes" data-lang="filter_lash">Ресницы</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="architecture">
+                <div class="portfolio-placeholder">
+                    <img src="https://via.placeholder.com/300x200?text=Архитектура бровей" alt="Архитектура бровей">
+                </div>
+                <div class="portfolio-overlay">
+                    <h4 class="portfolio-title" data-lang="port1_title">Архитектура бровей</h4>
+                    <p class="portfolio-category" data-lang="port1_cat">Коррекция формы</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="lamination">
+                <div class="portfolio-placeholder">
+                    <img src="https://via.placeholder.com/300x200?text=Ламинирование+1" alt="Ламинирование">
+                </div>
+                <div class="portfolio-overlay">
+                    <h4 class="portfolio-title" data-lang="port2_title">Ламинирование</h4>
+                    <p class="portfolio-category" data-lang="port2_cat">До и после</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="permanent">
+                <div class="portfolio-placeholder">
+                    <img src="https://via.placeholder.com/300x200?text=Перманент" alt="Перманентный макияж">
+                </div>
+                <div class="portfolio-overlay">
+                    <h4 class="portfolio-title" data-lang="port3_title">Перманентный макияж</h4>
+                    <p class="portfolio-category" data-lang="port3_cat">Натуральный эффект</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="lashes">
+                <div class="portfolio-placeholder">
+                    <img src="https://via.placeholder.com/300x200?text=Lami Lash" alt="Lami Lash">
+                </div>
+                <div class="portfolio-overlay">
+                    <h4 class="portfolio-title" data-lang="port4_title">Lami Lash</h4>
+                    <p class="portfolio-category" data-lang="port4_cat">Ламинирование ресниц</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="architecture">
+                <div class="portfolio-placeholder">
+                    <img src="https://via.placeholder.com/300x200?text=Хна" alt="Окрашивание">
+                </div>
+                <div class="portfolio-overlay">
+                    <h4 class="portfolio-title" data-lang="port5_title">Окрашивание</h4>
+                    <p class="portfolio-category" data-lang="port5_cat">Естественный цвет</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="lamination">
+                <div class="portfolio-placeholder">
+                    <img src="https://via.placeholder.com/300x200?text=Укладка" alt="Долговременная укладка">
+                </div>
+                <div class="portfolio-overlay">
+                    <h4 class="portfolio-title" data-lang="port6_title">Долговременная укладка</h4>
+                    <p class="portfolio-category" data-lang="port6_cat">Идеальная форма</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-lang="contact_badge">Связаться</span>
+                <h2 class="section-title" data-lang="contact_title">Контакты и запись</h2>
+                <p class="section-description" data-lang="contact_description">
+                    Записывайтесь через Instagram для быстрого ответа
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-lang="contact_info_title">Связаться со мной</h3>
+                    
+                    <div class="contact-methods">
+                        <a href="https://ig.me/m/klymenko.kristina" class="contact-item" target="_blank">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p>@klymenko.kristina</p>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+37255551234" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-lang="contact_phone">Телефон</h4>
+                                <p>+372 5900 6554</p>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 data-lang="contact_hours">Время работы</h4>
+                                <p data-lang="contact_schedule">Пн-Сб: 10:00-19:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-note">
+                    <h4 data-lang="booking_title">Запись только через Instagram!</h4>
+                    <p data-lang="booking_text">
+                        Для быстрого ответа и удобного планирования записывайтесь через Instagram Direct
+                    </p>
+                    <div class="discount-badge" data-lang="discount_text">
+                        -10% на первое посещение
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Кристина Клименко</h4>
+                    <p data-lang="footer_about">Профессиональный мастер-бровист с 3-летним опытом. Создаю красоту, которая подчеркивает индивидуальность.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/klymenko.kristina" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="tel:+37255551234" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-lang="footer_services">Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services" data-lang="footer_arch">Архитектура бровей</a></li>
+                        <li><a href="#services" data-lang="footer_lami">Ламинирование</a></li>
+                        <li><a href="#services" data-lang="footer_perm">Перманентный макияж</a></li>
+                        <li><a href="#services" data-lang="footer_lash">Lami Lash</a></li>
+                        <li><a href="#services" data-lang="footer_consult">Консультация</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-lang="footer_courses">Курсы</h4>
+                    <ul class="footer-links">
+                        <li><a href="#courses" data-lang="footer_basic">Базовый курс</a></li>
+                        <li><a href="#courses" data-lang="footer_lamination">Ламинирование</a></li>
+                        <li><a href="#courses" data-lang="footer_permanent">Перманентный макияж</a></li>
+                        <li><a href="#courses" data-lang="footer_masterclass">Мастер-класс</a></li>
+                        <li><a href="#courses" data-lang="footer_online">Онлайн курс</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-lang="footer_contact">Контакты</h4>
+                    <ul class="footer-links">
+                        <li>Tallinn, Tartu</li>
+                        <li>+372 5900 6554</li>
+                        <li data-lang="footer_hours">Пн-Сб: 10:00-19:00</li>
+                        <li>@klymenko.kristina</li>
+                    </ul>
+                </div>
+            </div>
+            
+<div class="footer-bottom">
+    <p>&copy; 2025 Создано с помощью 
+        <a href="https://instagram.com/Klmk.cm" target="_blank" rel="noopener noreferrer" style="color: white;">Klmk.cm</a> 
+        <span data-lang="footer_rights">Все права защищены</span>.
+    </p>
+</div>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Переводы
+        const translations = {
+            ru: {
+                nav_home: "Главная",
+                nav_services: "Услуги",
+                nav_courses: "Курсы",
+                nav_about: "О мне",
+                nav_portfolio: "Портфолио",
+                nav_contact: "Контакты",
+                hero_badge: "Сертифицированный мастер ELAN",
+                hero_subtitle: "Создаю идеальные брови в Таллинне и Тарту",
+                hero_btn_book: "Записаться в Instagram",
+                hero_btn_portfolio: "Мои работы",
+                stat_clients: "Клиентов",
+                stat_experience: "Лет опыта",
+                stat_cities: "Города",
+                services_badge: "Мои услуги",
+                services_title: "Профессиональный уход за бровями",
+                services_description: "Использую только премиальные материалы ELAN и современные техники",
+                service1_title: "Архитектура + Хна",
+                service1_desc: "Создание формы бровей с окрашиванием натуральной хной. Эффект до 3 недель.",
+                service2_title: "Архитектура + Краска", 
+                service2_desc: "Коррекция формы с окрашиванием профессиональной краской. Эффект до 2 недель.",
+                service3_title: "Ламинирование",
+                service3_desc: "Полный комплекс: ламинирование + коррекция + окрашивание. Эффект до 6 недель.",
+                service4_title: "Консультация",
+                service4_desc: "Подбор формы и цвета бровей, рекомендации по уходу.",
+                service5_title: "Долговременная укладка",
+                service5_desc: "Укладка бровей с фиксацией. Идеальная форма каждый день.",
+                service6_title: "Перманентный макияж",
+                service6_desc: "Татуаж бровей с эффектом на 1-2 года. Натуральный результат.",
+                service7_title: "Коррекция перманента",
+                service7_desc: "Коррекция и освежение перманентного макияжа бровей.",
+                service8_title: "Lami Lash",
+                service8_desc: "Ламинирование ресниц для выразительного взгляда.",
+                duration_1h: "1 час",
+                duration_45m: "45 мин",
+                duration_90m: "1.5 часа",
+                duration_20m: "20 мин",
+                duration_2h: "2 часа",
+                courses_badge: "Обучение",
+                courses_title: "Авторские курсы",
+                courses_description: "Передаю свой опыт и знания будущим мастерам красоты",
+                course_popular: "Популярный",
+                course_advanced: "Продвинутый",
+                course_premium: "Premium",
+                course_new: "Новинка",
+                course_group: "Групповой",
+                course_online: "Online",
+                course1_title: "Базовый курс \"Архитектура бровей\"",
+                course1_desc: "Полный курс для начинающих мастеров. Изучите основы архитектуры, коррекции и окрашивания бровей.",
+                course1_feature1: "Теоретическая база",
+                course1_feature2: "Практика на моделях",
+                course1_feature3: "Сертификат",
+                course1_feature4: "Поддержка после курса",
+                course2_title: "Ламинирование бровей",
+                course2_desc: "Изучите технику ламинирования и долговременной укладки бровей. Работа с современными составами.",
+                course2_feature1: "Техника ламинирования",
+                course2_feature2: "Работа с составами",
+                course2_feature3: "Практические навыки",
+                course2_feature4: "Материалы включены",
+                course3_title: "Перманентный макияж бровей",
+                course3_desc: "Профессиональный курс по перманентному макияжу. Изучите современные техники татуажа бровей.",
+                course3_feature1: "Теория пигментологии",
+                course3_feature2: "Техники татуажа",
+                course3_feature3: "Работа с оборудованием",
+                course3_feature4: "Международный сертификат",
+                course4_title: "Lami Lash - Ламинирование ресниц",
+                course4_desc: "Освойте популярную процедуру ламинирования ресниц. Создавайте выразительный взгляд без наращивания.",
+                course4_feature1: "Анатомия ресниц",
+                course4_feature2: "Техника ламинирования",
+                course4_feature3: "Подбор составов",
+                course4_feature4: "Стартовый набор",
+                course5_title: "Мастер-класс \"Идеальные брови\"",
+                course5_desc: "Интенсивный мастер-класс для практикующих мастеров. Секреты идеальной формы и симметрии.",
+                course5_feature1: "Авторские техники",
+                course5_feature2: "Работа со сложными случаями",
+                course5_feature3: "Q&A сессия",
+                course5_feature4: "Networking",
+                course6_title: "Онлайн курс \"Основы бровиста\"",
+                course6_desc: "Теоретический курс для изучения основ профессии. Доступ к материалам на 6 месяцев.",
+                course6_feature1: "20+ видео уроков",
+                course6_feature2: "Конспекты и схемы",
+                course6_feature3: "Тесты и задания",
+                course6_feature4: "Обратная связь",
+                course_duration_3d: "3 дня",
+                course_duration_2d: "2 дня",
+                course_duration_5d: "5 дней",
+                course_duration_1d: "1 день",
+                course_duration_4h: "4 часа",
+                course_duration_online: "6 месяцев",
+                course_btn: "Записаться",
+                about_badge: "О мастере",
+                about_title: "Привет! Я Кристина — ваш мастер красоты",
+                about_text: "Более 5 лет помогаю женщинам обрести уверенность через красивые брови. Сертифицированный технолог ELAN, использую только премиальные материалы.",
+                about_btn: "Связаться в Instagram",
+                exp_years: "Лет опыта",
+                feature1: "Сертифицированный технолог ELAN",
+                feature2: "Более 500 довольных клиентов",
+                feature3: "Работаю в Таллинне и Тарту",
+                feature4: "Персональный подход к каждому",
+                feature5: "Только премиальные материалы",
+                portfolio_badge: "Мои работы",
+                portfolio_title: "Портфолио",
+                portfolio_description: "Каждая работа — это индивидуальный подход и внимание к деталям",
+                filter_all: "Все работы",
+                filter_arch: "Архитектура",
+                filter_lami: "Ламинирование", 
+                filter_perm: "Перманент",
+                filter_lash: "Ресницы",
+                port1_title: "Архитектура бровей",
+                port1_cat: "Коррекция формы",
+                port2_title: "Ламинирование",
+                port2_cat: "До и после",
+                port3_title: "Перманентный макияж",
+                port3_cat: "Натуральный эффект",
+                port4_title: "Lami Lash",
+                port4_cat: "Ламинирование ресниц",
+                port5_title: "Окрашивание хной",
+                port5_cat: "Естественный цвет",
+                port6_title: "Долговременная укладка",
+                port6_cat: "Идеальная форма",
+                contact_badge: "Связаться",
+                contact_title: "Контакты и запись",
+                contact_description: "Записывайтесь через Instagram для быстрого ответа",
+                contact_info_title: "Связаться со мной",
+                contact_phone: "Телефон",
+                contact_cities: "Города работы",
+                contact_hours: "Время работы",
+                contact_schedule: "Пн-Сб: 10:00-19:00",
+                booking_title: "Запись только через Instagram!",
+                booking_text: "Для быстрого ответа и удобного планирования записывайтесь через Instagram Direct",
+                discount_text: "-10% на первое посещение",
+                footer_about: "Профессиональный мастер-бровист с 5-летним опытом. Создаю красоту, которая подчеркивает индивидуальность.",
+                footer_services: "Услуги",
+                footer_courses: "Курсы",
+                footer_arch: "Архитектура бровей",
+                footer_lami: "Ламинирование",
+                footer_perm: "Перманентный макияж",
+                footer_lash: "Lami Lash",
+                footer_consult: "Консультация",
+                footer_basic: "Базовый курс",
+                footer_lamination: "Ламинирование",
+                footer_permanent: "Перманентный макияж",
+                footer_masterclass: "Мастер-класс",
+                footer_online: "Онлайн курс",
+                footer_contact: "Контакты",
+                footer_hours: "Пн-Сб: 10:00-19:00",
+                footer_rights: "Все права защищены"
+            },
+            en: {
+                nav_home: "Home",
+                nav_services: "Services",
+                nav_courses: "Courses",
+                nav_about: "About",
+                nav_portfolio: "Portfolio", 
+                nav_contact: "Contact",
+                hero_badge: "Certified ELAN Master",
+                hero_subtitle: "Creating perfect brows in Tallinn and Tartu",
+                hero_btn_book: "Book via Instagram",
+                hero_btn_portfolio: "My Work",
+                stat_clients: "Clients",
+                stat_experience: "Years Experience",
+                stat_cities: "Cities",
+                services_badge: "My Services",
+                services_title: "Professional Eyebrow Care",
+                services_description: "Using only premium ELAN materials and modern techniques",
+                service1_title: "Architecture + Henna",
+                service1_desc: "Brow shaping with natural henna coloring. Effect lasts up to 3 weeks.",
+                service2_title: "Architecture + Tint",
+                service2_desc: "Shape correction with professional tint. Effect lasts up to 2 weeks.",
+                service3_title: "Lamination",
+                service3_desc: "Full complex: lamination + correction + coloring. Effect lasts up to 6 weeks.",
+                service4_title: "Consultation",
+                service4_desc: "Brow shape and color selection, care recommendations.",
+                service5_title: "Long-term Styling",
+                service5_desc: "Brow styling with fixation. Perfect shape every day.",
+                service6_title: "Permanent Makeup",
+                service6_desc: "Brow tattoo with 1-2 year effect. Natural result.",
+                service7_title: "Permanent Correction",
+                service7_desc: "Correction and refreshing of permanent brow makeup.",
+                service8_title: "Lami Lash",
+                service8_desc: "Lash lamination for expressive look.",
+                duration_1h: "1 hour",
+                duration_45m: "45 min",
+                duration_90m: "1.5 hours",
+                duration_20m: "20 min",
+                duration_2h: "2 hours",
+                courses_badge: "Training",
+                courses_title: "Author's Courses",
+                courses_description: "Sharing my experience and knowledge with future beauty masters",
+                course_popular: "Popular",
+                course_advanced: "Advanced",
+                course_premium: "Premium",
+                course_new: "New",
+                course_group: "Group",
+                course_online: "Online",
+                course1_title: "Basic Course \"Brow Architecture\"",
+                course1_desc: "Complete course for beginner masters. Learn the basics of architecture, correction and brow coloring.",
+                course1_feature1: "Theoretical foundation",
+                course1_feature2: "Practice on models",
+                course1_feature3: "Certificate",
+                course1_feature4: "Post-course support",
+                course2_title: "Brow Lamination",
+                course2_desc: "Learn lamination and long-term brow styling techniques. Working with modern formulations.",
+                course2_feature1: "Lamination technique",
+                course2_feature2: "Working with formulations",
+                course2_feature3: "Practical skills",
+                course2_feature4: "Materials included",
+                course3_title: "Permanent Brow Makeup",
+                course3_desc: "Professional permanent makeup course. Learn modern brow tattoo techniques.",
+                course3_feature1: "Pigmentology theory",
+                course3_feature2: "Tattoo techniques",
+                course3_feature3: "Equipment work",
+                course3_feature4: "International certificate",
+                course4_title: "Lami Lash - Lash Lamination",
+                course4_desc: "Master the popular lash lamination procedure. Create expressive looks without extensions.",
+                course4_feature1: "Lash anatomy",
+                course4_feature2: "Lamination technique",
+                course4_feature3: "Formula selection",
+                course4_feature4: "Starter kit",
+                course5_title: "Master Class \"Perfect Brows\"",
+                course5_desc: "Intensive master class for practicing artists. Secrets of perfect shape and symmetry.",
+                course5_feature1: "Author's techniques",
+                course5_feature2: "Complex cases work",
+                course5_feature3: "Q&A session",
+                course5_feature4: "Networking",
+                course6_title: "Online Course \"Brow Artist Basics\"",
+                course6_desc: "Theoretical course for learning profession basics. 6-month access to materials.",
+                course6_feature1: "20+ video lessons",
+                course6_feature2: "Notes and schemes",
+                course6_feature3: "Tests and assignments",
+                course6_feature4: "Feedback",
+                course_duration_3d: "3 days",
+                course_duration_2d: "2 days",
+                course_duration_5d: "5 days",
+                course_duration_1d: "1 day",
+                course_duration_4h: "4 hours",
+                course_duration_online: "6 months",
+                course_btn: "Book",
+                about_badge: "About Master",
+                about_title: "Hi! I'm Kristina — your beauty master",
+                about_text: "For over 5 years I've been helping women gain confidence through beautiful brows. Certified ELAN technologist, using only premium materials.",
+                about_btn: "Contact via Instagram",
+                exp_years: "Years Experience",
+                feature1: "Certified ELAN Technologist",
+                feature2: "Over 500 satisfied clients",
+                feature3: "Working in Tallinn and Tartu",
+                feature4: "Personal approach to everyone",
+                feature5: "Only premium materials",
+                portfolio_badge: "My Work",
+                portfolio_title: "Portfolio",
+                portfolio_description: "Each work is an individual approach and attention to detail",
+                filter_all: "All Work",
+                filter_arch: "Architecture",
+                filter_lami: "Lamination",
+                filter_perm: "Permanent",
+                filter_lash: "Lashes",
+                port1_title: "Brow Architecture",
+                port1_cat: "Shape Correction",
+                port2_title: "Lamination",
+                port2_cat: "Before & After",
+                port3_title: "Permanent Makeup",
+                port3_cat: "Natural Effect",
+                port4_title: "Lami Lash",
+                port4_cat: "Lash Lamination",
+                port5_title: "Henna Coloring",
+                port5_cat: "Natural Color",
+                port6_title: "Long-term Styling",
+                port6_cat: "Perfect Shape",
+                contact_badge: "Contact",
+                contact_title: "Contact & Booking",
+                contact_description: "Book through Instagram for quick response",
+                contact_info_title: "Contact me",
+                contact_phone: "Phone",
+                contact_cities: "Working Cities",
+                contact_hours: "Working Hours",
+                contact_schedule: "Mon-Sat: 10:00-19:00",
+                booking_title: "Booking only via Instagram!",
+                booking_text: "For quick response and convenient planning, book through Instagram Direct",
+                discount_text: "-10% for first visit",
+                footer_about: "Professional brow artist with 5 years experience. Creating beauty that highlights individuality.",
+                footer_services: "Services",
+                footer_courses: "Courses",
+                footer_arch: "Brow Architecture",
+                footer_lami: "Lamination",
+                footer_perm: "Permanent Makeup",
+                footer_lash: "Lami Lash",
+                footer_consult: "Consultation",
+                footer_basic: "Basic Course",
+                footer_lamination: "Lamination",
+                footer_permanent: "Permanent Makeup",
+                footer_masterclass: "Master Class",
+                footer_online: "Online Course",
+                footer_contact: "Contact",
+                footer_hours: "Mon-Sat: 10:00-19:00",
+                footer_rights: "All rights reserved"
+            },
+            et: {
+                nav_home: "Avaleht",
+                nav_services: "Teenused",
+                nav_courses: "Kursused",
+                nav_about: "Meist",
+                nav_portfolio: "Portfoolio",
+                nav_contact: "Kontakt",
+                hero_badge: "Sertifitseeritud ELAN meister",
+                hero_subtitle: "Loon ideaalsed kulmud Tallinnas ja Tartus",
+                hero_btn_book: "Broneeri Instagramist",
+                hero_btn_portfolio: "Minu tööd",
+                stat_clients: "Klienti",
+                stat_experience: "Aastat kogemust",
+                stat_cities: "Linna",
+                services_badge: "Minu teenused",
+                services_title: "Professionaalne kulmude hooldus",
+                services_description: "Kasutan ainult premium ELAN materjale ja kaasaegseid tehnikaid",
+                service1_title: "Arhitektuur + Henna",
+                service1_desc: "Kulmude kujundamine looduslike hennavärvidega. Efekt kestab kuni 3 nädalat.",
+                service2_title: "Arhitektuur + Värv",
+                service2_desc: "Kuju parandus professionaalse värviga. Efekt kestab kuni 2 nädalat.",
+                service3_title: "Lamineerimine",
+                service3_desc: "Täielik kompleks: lamineerimine + parandus + värvimine. Efekt kestab kuni 6 nädalat.",
+                service4_title: "Konsultatsioon",
+                service4_desc: "Kulmude kuju ja värvi valik, hooldussoovitused.",
+                service5_title: "Pikaajaline stiilimine",
+                service5_desc: "Kulmude stiilimine fikseerimisega. Ideaalne kuju iga päev.",
+                service6_title: "Püsimeik",
+                service6_desc: "Kulmude tatueering 1-2 aasta efektiga. Loomulik tulemus.",
+                service7_title: "Püsimeigi parandus",
+                service7_desc: "Kulmude püsimeigi parandamine ja värskendamine.",
+                service8_title: "Lami Lash",
+                service8_desc: "Ripsme lamineerimine väljendusrikka pilgu jaoks.",
+                duration_1h: "1 tund",
+                duration_45m: "45 min",
+                duration_90m: "1,5 tundi",
+                duration_20m: "20 min",
+                duration_2h: "2 tundi",
+                courses_badge: "Koolitus",
+                courses_title: "Autori kursused",
+                courses_description: "Jagan oma kogemusi ja teadmisi tulevaste ilumеistritega",
+                course_popular: "Populaarne",
+                course_advanced: "Edasijõudnute",
+                course_premium: "Premium",
+                course_new: "Uus",
+                course_group: "Grupikursus",
+                course_online: "Online",
+                course1_title: "Põhikursus \"Kulmude arhitektuur\"",
+                course1_desc: "Täielik kursus algajatele meistritele. Õppige arhitektuuri, parandamise ja kulmude värvimise aluseid.",
+                course1_feature1: "Teoreetiline baas",
+                course1_feature2: "Praktika mudelitega",
+                course1_feature3: "Sertifikaat",
+                course1_feature4: "Tugi pärast kursust",
+                course2_title: "Kulmude lamineerimine",
+                course2_desc: "Õppige lamineerimise ja pikaajalise kulmude stiilimise tehnikaid. Töö kaasaegsete koostistega.",
+                course2_feature1: "Lamineerimistehnika",
+                course2_feature2: "Töö koostistega",
+                course2_feature3: "Praktilised oskused",
+                course2_feature4: "Materjalid kaasas",
+                course3_title: "Kulmude püsimeik",
+                course3_desc: "Professionaalne püsimeigi kursus. Õppige kaasaegseid kulmude tatueerimistehnikaid.",
+                course3_feature1: "Pigmentoloogia teooria",
+                course3_feature2: "Tatueerimistehnikad",
+                course3_feature3: "Töö seadmetega",
+                course3_feature4: "Rahvusvaheline sertifikaat",
+                course4_title: "Lami Lash - Ripsme lamineerimine",
+                course4_desc: "Omandage populaarne ripsme lamineerimise protseduur. Looge väljendusrikas pilk ilma pikendamiseta.",
+                course4_feature1: "Ripsme anatoomia",
+                course4_feature2: "Lamineerimistehnika",
+                course4_feature3: "Koostiste valik",
+                course4_feature4: "Algajate komplekt",
+                course5_title: "Meistriklass \"Ideaalsed kulmud\"",
+                course5_desc: "Intensiivne meistriklass praktiseerivатele meistritele. Ideaalse kuju ja sümmeetria saladused.",
+                course5_feature1: "Autori tehnikad",
+                course5_feature2: "Töö keeruliste juhtumitega",
+                course5_feature3: "K&V seanss",
+                course5_feature4: "Võrgustiku loomine",
+                course6_title: "Veebikursus \"Kulmumeistri alused\"",
+                course6_desc: "Teoreetiline kursus ametialuste õppimiseks. Juurdepääs materjalidele 6 kuuks.",
+                course6_feature1: "20+ videoõppetundi",
+                course6_feature2: "Konspektid ja skeemid",
+                course6_feature3: "Testid ja ülesanded",
+                course6_feature4: "Tagasiside",
+                course_duration_3d: "3 päeva",
+                course_duration_2d: "2 päeva",
+                course_duration_5d: "5 päeva",
+                course_duration_1d: "1 päev",
+                course_duration_4h: "4 tundi",
+                course_duration_online: "6 kuud",
+                course_btn: "Registreeru",
+                about_badge: "Meistrist",
+                about_title: "Tere! Olen Kristina — teie ilummeister",
+                about_text: "Üle 5 aasta olen aidanud naistel saada enesekindlust ilusate kulmude kaudu. Sertifitseeritud ELAN tehnoloog, kasutan ainult premium materjale.",
+                about_btn: "Võta ühendust Instagramis",
+                exp_years: "Aastat kogemust",
+                feature1: "Sertifitseeritud ELAN tehnoloog",
+                feature2: "Üle 500 rahuloleva kliendi",
+                feature3: "Töötan Tallinnas ja Tartus",
+                feature4: "Isiklik lähenemine igaühele",
+                feature5: "Ainult premium materjalid",
+                portfolio_badge: "Minu tööd",
+                portfolio_title: "Portfoolio",
+                portfolio_description: "Iga töö on individuaalne lähenemine ja tähelepanu detailidele",
+                filter_all: "Kõik tööd",
+                filter_arch: "Arhitektuur",
+                filter_lami: "Lamineerimine",
+                filter_perm: "Püsimeik",
+                filter_lash: "Ripsmed",
+                port1_title: "Kulmude arhitektuur",
+                port1_cat: "Kuju parandus",
+                port2_title: "Lamineerimine",
+                port2_cat: "Enne ja pärast",
+                port3_title: "Püsimeik",
+                port3_cat: "Loomulik efekt",
+                port4_title: "Lami Lash",
+                port4_cat: "Ripsme lamineerimine",
+                port5_title: "Henna värvimine",
+                port5_cat: "Loomulik värv",
+                port6_title: "Pikaajaline stiilimine",
+                port6_cat: "Ideaalne kuju",
+                contact_badge: "Kontakt",
+                contact_title: "Kontakt ja broneering",
+                contact_description: "Broneerige Instagrami kaudu kiire vastuse saamiseks",
+                contact_info_title: "Võtke minuga ühendust",
+                contact_phone: "Telefon",
+                contact_cities: "Töö linnad",
+                contact_hours: "Tööaeg",
+                contact_schedule: "E-L: 10:00-19:00",
+                booking_title: "Broneering ainult Instagrami kaudu!",
+                booking_text: "Kiire vastuse ja mugava planeerimise jaoks broneerige Instagram Direct kaudu",
+                discount_text: "-10% esimesel külastusel",
+                footer_about: "Professionaalne kulmumeister 5-aastase kogemusega. Loon ilu, mis rõhutab individuaalsust.",
+                footer_services: "Teenused",
+                footer_courses: "Kursused",
+                footer_arch: "Kulmude arhitektuur",
+                footer_lami: "Lamineerimine",
+                footer_perm: "Püsimeik",
+                footer_lash: "Lami Lash",
+                footer_consult: "Konsultatsioon",
+                footer_basic: "Põhikursus",
+                footer_lamination: "Lamineerimine",
+                footer_permanent: "Püsimeik",
+                footer_masterclass: "Meistriklass",
+                footer_online: "Veebikursus",
+                footer_contact: "Kontakt",
+                footer_hours: "E-L: 10:00-19:00",
+                footer_rights: "Kõik õigused kaitstud"
+            }
+        };
+
+        let currentLang = 'ru';
+
+        // Функция смены языка
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Обновляем активную кнопку языка
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Обновляем весь текст на странице
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                const key = element.dataset.lang;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Плавная прокрутка и активные ссылки
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Закрыть мобильное меню
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Обновление активной ссылки при прокрутке
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Эффект прокрутки навбара
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Индикатор прокрутки
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Кнопка "Наверх"
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Фильтрация портфолио
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Убрать активный класс у всех кнопок
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Добавить активный класс к нажатой кнопке
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Анимация при прокрутке
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Наблюдать за элементами для анимации
+        document.querySelectorAll('.service-card, .course-card, .portfolio-item, .contact-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'all 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Переключение языков
+        const langButtons = document.querySelectorAll('.lang-btn');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                changeLanguage(btn.dataset.lang);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
